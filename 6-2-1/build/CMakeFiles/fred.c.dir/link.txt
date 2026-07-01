@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/fred.c.dir/bill.c.o CMakeFiles/fred.c.dir/main.c.o -o fred.c 

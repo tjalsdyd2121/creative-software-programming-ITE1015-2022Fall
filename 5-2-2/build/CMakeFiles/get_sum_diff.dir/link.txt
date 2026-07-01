@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/get_sum_diff.dir/main.cc.o CMakeFiles/get_sum_diff.dir/sumdiff.cc.o -o get_sum_diff 

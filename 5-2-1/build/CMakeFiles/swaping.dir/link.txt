@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/swaping.dir/main.cc.o -o swaping 

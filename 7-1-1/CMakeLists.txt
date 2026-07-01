@@ -1,0 +1,1 @@
+add_executable(sorted_array sorted.cc main.cc)

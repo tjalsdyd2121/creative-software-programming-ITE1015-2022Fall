@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class A{
+public:
+    virtual string getTypeInfo() {return "This is an instance of class A" ; };
+};
+
+class B :public A{
+public: 
+    virtual string getTypeInfo() {return "This is an instance of class B" ;} ;
+};
+
+class C :public B{
+public:
+    virtual string getTypeInfo() {return "This is an instance of class C";};
+};
+
+void printObjectTypeInfo1(A* object){
+    cout << object->getTypeInfo() << "\n";
+}
+
+void printObjectTypeInfo2(A& object){
+    cout << object.getTypeInfo() << "\n";
+}
+
+int main(){
+    A* a = new A ; B* b = new B; C* c = new C;
+    vector<A*> arr;
+    arr.push_back(a); arr.push_back(b); arr.push_back(c);
+
+    printObjectTypeInfo1(arr[0]);
+    printObjectTypeInfo2(*(arr[0]));
+    printObjectTypeInfo1(arr[1]);
+    printObjectTypeInfo2(*arr[1]);
+    printObjectTypeInfo1(arr[2]);
+    printObjectTypeInfo2(*arr[2]);
+
+    delete a; delete b; delete c;
+}
